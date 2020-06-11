@@ -149,7 +149,7 @@
             //jadi data api dipanggil disini
             $.ajax({
                 type: 'GET',
-                url: '/admin/map/petabanjir/',
+                url: "http://127.0.0.1:8000/api/peta/",
                 dataType: 'json',
                 success: function(data) {
                     //disimpan dilocal storage datanya agar bisa dipanggil
@@ -160,11 +160,15 @@
 
             //memanggil data localstore
             var dataBanjir = localStorage.getItem('dataBanjir');
-            // console.log(JSON.parse(dataBanjir));
+            var dataKu = JSON.parse(dataBanjir).data;
             var color = '';
+            // console.log(dataKu);
+
             //ini disamakan datanyaa 
-            $.each(JSON.parse(dataBanjir), function(num, item) {
+            $.each(dataKu, function(num, item) {
                 desaItem = item.title;
+                // console.log(desa);
+                // console.log(desaItem);
                 if (desa.toUpperCase() == desaItem.toUpperCase()) {
                     color = item.history_category;
                     console.log(item.history_category);
