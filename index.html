@@ -149,7 +149,7 @@
             //jadi data api dipanggil disini
             $.ajax({
                 type: 'GET',
-                url: "http://127.0.0.1:8000/api/peta/",
+                url: "https://damp-dusk-99939.herokuapp.com/api/peta",
                 dataType: 'json',
                 success: function(data) {
                     //disimpan dilocal storage datanya agar bisa dipanggil
@@ -170,8 +170,8 @@
                 // console.log(desa);
                 // console.log(desaItem);
                 if (desa.toUpperCase() == desaItem.toUpperCase()) {
-                    color = item.history_category;
-                    console.log(item.history_category);
+                    color = item.prone_category;
+                    console.log(item.prone_category);
                 }
             });
 
