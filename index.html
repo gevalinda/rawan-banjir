@@ -160,12 +160,12 @@
 
             //memanggil data localstore
             var dataBanjir = localStorage.getItem('dataBanjir');
-            // var dataKu = JSON.parse(dataBanjir).data;
+            var dataKu = JSON.parse(dataBanjir).data;
             var color = '';
             // console.log(dataKu);
 
             //ini disamakan datanyaa 
-            $.each(JSON.parse(dataBanjir), function(num, item) {
+            $.each(dataKu, function(num, item) {
                 desaItem = item.title;
                 // console.log(desa);
                 // console.log(desaItem);
